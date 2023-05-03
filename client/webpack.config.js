@@ -38,12 +38,11 @@ module.exports = {
     ],
   },
   devServer: {
-    port: 8080,
-    watchFiles: ['./src/public/**.html'],
     proxy: {
-      '/': {
-        target: 'http://localhost:3000'
-      }
-    }
+      '*': 'http://localhost:3333'
+    },
+    compress: true,
+    hot: true,
+    watchFiles: ['./src/public/index.html']
   }
 }
