@@ -13,7 +13,7 @@ app.get('/', (req, res) => {
 app.get('/api/test', (req, res) => {
   console.log('triggered!');
   res.send({
-    message: 'It worked!'
+    message: 'Hi from the backend!'
   })
 });
 

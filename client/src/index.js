@@ -1,6 +1,7 @@
 import './css/style.css';
+import { sayHi } from './methods.js';
 
-fetch('/api/test')
-  .then(res => res.json())
-  .then(data => console.log(data))
-  .catch(err => console.log(err));
+const hiBtn = document.querySelector('#hi-btn');
+
+hiBtn.addEventListener('click', sayHi);
+
